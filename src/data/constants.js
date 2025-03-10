@@ -252,7 +252,7 @@ export const projects = [
     "tags": ["LLMs", "Sentiment Analysis", "Heroku", "NLP"],
     "category": "gen ai",
     "github": "https://raw.githubusercontent.com/MounaimDAIEXP2/images/refs/heads/main/dall_e.webp",
-    "webapp": "https://repintel-9cd64a959d6e.herokuapp.com/#form"
+    "webapp": "https://repintel.zaiv.io/"
   },
   {
     "id": 1,
