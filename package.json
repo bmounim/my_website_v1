@@ -1,7 +1,7 @@
 {
   "name": "mounaim-belkhoumali-portfolio",
   "version": "0.1.0",
-  "homepage": "https://bmounim.github.io/my_website",
+  "homepage": "https://bmounim.github.io/my_website_v1",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.11.0",

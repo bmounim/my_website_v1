@@ -6,7 +6,7 @@ export const Bio = {
     "Data Engineer",
   ],
   description:
-"Ingénieur d'État de l'École Nationale Polytechnique en Data Science et Intelligence Artificielle, et diplômé d'un Master 2 de Sorbonne Université dans le même domaine, j'ai eu l'opportunité de développer mes compétences à travers 5 stages enrichissants et une expérience freelance sur Upwork, où j'ai collaboré avec 16 clients internationaux. Aujourd'hui, je suis prêt à relever de nouveaux défis et à apporter ma touche humaine ainsi que mes compétences techniques au sein d'un poste en CDI.",
+"Ingénieur d'État de l'École Nationale Polytechnique en Data Science et Intelligence Artificielle, et diplômé d'un Master 2 de Sorbonne Université dans le même domaine, j'ai eu l'opportunité de développer mes compétences à travers 5 stages enrichissants, avec pleins de projets personnels dans le domain de l'IA et de la Data. Aujourd'hui, je suis prêt à relever de nouveaux défis et à apporter ma touche humaine ainsi que mes compétences techniques au sein d'un poste en CDI.",
   resume:
     "https://drive.usercontent.google.com/download?id=1i0vb00KeMJ86wVTQMECa6Dgj7wilNX68&export=download&authuser=0&confirm=t&uuid=f7158451-6bec-4706-a9e1-0035f845c8f8&at=AIrpjvP1kNBluEb5C5Hy7spITKUL:1737900465802",
   linkedin: "https://www.linkedin.com/in/belkhoumali/",
@@ -152,7 +152,7 @@ export const experiences = [
       "Generative AI",
       "Collaboration",
     ],
-    doc: "https://drive.google.com/file/d/1D3-o5nUhfYgEz9vANXlXZQACy3zZdg7q/view?usp=sharing", // Replace with actual document URL
+    doc: "https://drive.google.com/file/d/12uyQdlKeH2gfxwgN9aJrH8DhfhHtI1cX/view?usp=sharing", // Replace with actual document URL
   },
   {
     id: 1,
@@ -221,7 +221,7 @@ export const experiences = [
       "Data Pipelines",
     ],
     doc: "https://drive.google.com/file/d/12OsRFysbNm-S6vSvu2rPq3SBRjLVfAxO/view?usp=sharing", // Replace with actual document URL
-  },
+  }
 ];
 
 export const education = [

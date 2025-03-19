@@ -1,9 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
-import { useRef } from 'react';
+import React, { useRef, useState } from 'react';
+import styled from 'styled-components';
 import emailjs from '@emailjs/browser';
-import { Snackbar } from '@mui/material';
-import { Alert } from '@mui/material';
+import { Snackbar, Alert } from '@mui/material';
 
 const Container = styled.div`
 display: flex;
@@ -105,85 +103,124 @@ const ContactInputMessage = styled.textarea`
 `;
 
 const ContactButton = styled.input`
-  /* ... existing styles ... */
+  width: 100%;
+  padding: 13px 20px;
+  margin-top: 8px;
+  border-radius: 12px;
+  border: none;
+  background: ${({ theme }) => theme.primary};
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 
   &:hover {
+    background: ${({ theme }) => theme.primary + 90};
     transform: scale(1.02);
-    box-shadow: 0px 0px 12px rgba(148, 0, 211, 0.5);
+  }
+
+  &:active {
+    transform: scale(0.98);
   }
 
   &:disabled {
-    background: gray;
+    background: #6d6d6d;
     cursor: not-allowed;
+    opacity: 0.7;
+    transform: none;
   }
 `;
 
-
-
 const Contact = () => {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
   const form = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    emailjs.sendForm('service_z6s8n3i', 'template_n6rv0ke', form.current, 'SXVApVBKFhU0mkTvQ')
-      .then((result) => {
-        setOpen(true);
-        form.current.reset();
-      }, (error) => {
-        console.log(error.text);
-      });
+    setLoading(true);
+    setError(null);
+
+    emailjs
+      .sendForm('service_z6s8n3i', 'template_n6rv0ke', form.current, 'SXVApVBKFhU0mkTvQ')
+      .then(
+        (result) => {
+          setOpen(true);
+          form.current.reset();
+          setLoading(false);
+        },
+        (error) => {
+          console.error(error);
+          setError('Failed to send message. Please try again later.');
+          setLoading(false);
+        }
+      );
   };
 
   return (
-  <Container>
-    <Wrapper>
-      <Title>Contact</Title>
-      <Desc>Feel free to reach out to me for any questions or opportunities!</Desc>
+    <Container>
+      <Wrapper>
+        <Title>Contact</Title>
+        <Desc>Feel free to reach out to me for any questions or opportunities!</Desc>
 
-      <ContactForm ref={form} onSubmit={handleSubmit}>
-        <ContactTitle>Email Me 🚀</ContactTitle>
+        <ContactForm ref={form} onSubmit={handleSubmit}>
+          <ContactTitle>Email Me 🚀</ContactTitle>
 
-        <ContactInput
-          placeholder="Your Name"
-          name="from_name"
-          onKeyDown={(e) => {
-            if (e.key === 'Enter') {
-              e.preventDefault(); // Prevent form submission on Enter
-            }
-          }}
-          required
-        />
+          <ContactInput
+            placeholder="Your Name"
+            name="from_name"
+            required
+          />
 
-        <ContactInputMessage
-          placeholder="Message"
-          rows="4"
-          name="message"
-          required
-        />
+          <ContactInput
+            placeholder="Your Email"
+            name="from_email"
+            type="email"
+            required
+          />
 
-        <ContactButton type="submit" value="Send" />
-      </ContactForm>
+          <ContactInputMessage
+            placeholder="Your Message"
+            rows="4"
+            name="message"
+            required
+          />
 
-      <Snackbar
-        open={open}
-        autoHideDuration={6000}
-        onClose={() => setOpen(false)}
-        anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
-      >
-        <Alert
-          severity="success"
-          variant="filled"
-          sx={{ width: '100%' }}
+          <ContactButton
+            type="submit"
+            value={loading ? "Sending..." : "Send"}
+            disabled={loading}
+          />
+        </ContactForm>
+
+        {/* Success Notification */}
+        <Snackbar
+          open={open}
+          autoHideDuration={6000}
+          onClose={() => setOpen(false)}
+          anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
         >
-          Email sent successfully!
-        </Alert>
-      </Snackbar>
-    </Wrapper>
-  </Container>
-);
+          <Alert severity="success" sx={{ width: '100%' }}>
+            Message sent successfully! 🚀
+          </Alert>
+        </Snackbar>
+
+        {/* Error Notification */}
+        <Snackbar
+          open={!!error}
+          autoHideDuration={6000}
+          onClose={() => setError(null)}
+          anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+        >
+          <Alert severity="error" sx={{ width: '100%' }}>
+            {error}
+          </Alert>
+        </Snackbar>
+      </Wrapper>
+    </Container>
+  );
 };
 
 export default Contact;
