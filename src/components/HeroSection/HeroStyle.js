@@ -201,3 +201,16 @@ export const ResumeButton = styled.a`
     } 
 
 `;
+
+export const ButtonGroup = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    
+    @media (max-width: 640px) {
+        justify-content: center;
+        gap: 16px;
+    }
+`;
