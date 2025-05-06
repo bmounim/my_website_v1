@@ -249,13 +249,23 @@ export const projects = [
     "title": "RepIntelAI",
     "description": "Imagine que tu es une personnalité connue, une entreprise, un influenceur ou même une personne peu connue mais présente sur Internet. Cet outil te permet d'obtenir un aperçu général de ton image en ligne (sur les sites web, forums, réseaux sociaux...) et d'analyser le sentiment dominant à ton sujet. À la fin, il te fournit des conseils pour améliorer ton image. Il te suffit d'entrer le nom de l'entité souhaitée, et l'outil va scrapper l'ensemble du web grâce aux LLMs et au prompt engineering pour générer un rapport complet avec tous les détails.",
     "image": "https://raw.githubusercontent.com/MounaimDAIEXP2/images/refs/heads/main/RepinteilAI.png",
-    "tags": ["LLMs", "Sentiment Analysis", "Heroku", "NLP"],
+    "tags": ["Selenium", "Tavily API", "OpenAI LLMs", "Prompt Engineering", "Next.js", "FastAPI", "Tailwind CSS", "Docker", "Heroku"],
     "category": "gen ai",
     "github": "https://raw.githubusercontent.com/MounaimDAIEXP2/images/refs/heads/main/dall_e.webp",
     "webapp": "https://credentl-3eb6ae72c7de.herokuapp.com/"
   },
   {
     "id": 1,
+    "title": "ArgerAI Générateur d'Articles",
+    "description": "Cette plateforme automatise la création et la publication d'articles pour LinkedIn, X et WordPress, simplifiant la génération de contenu avec l'IA. Les utilisateurs saisissent un sujet, une URL ou un texte brut pour produire des articles adaptés. Elle ajuste le ton et le format pour chaque plateforme, recherche les sujets tendances, génère des images via DALL·E et publie directement via APIs. Inclut un historique des articles générés.",
+    "image": "https://raw.githubusercontent.com/MounaimDAIEXP2/images/refs/heads/main/RepinteilAI.png",
+    "tags": ["Selenium", "OpenAI LLMs", "Next.js", "FastAPI", "Docker", "Netlify"],
+    "category": "gen ai",
+    "github": "https://raw.githubusercontent.com/MounaimDAIEXP2/images/refs/heads/main/dall_e.webp",
+    "webapp": "https://arger.zaiv.io/"
+},
+  {
+    "id": 2,
     "title": "Data Sage",
     "description": "Imagine que tu as un fichier Excel et que tu souhaites réaliser des visualisations, obtenir des statistiques ou extraire des insights utiles. Il te suffit d’uploader ton fichier sur l’outil, puis d’utiliser une barre de prompting pour poser toutes tes questions : 'Fais-moi un histogramme de la colonne X', 'Quelle est la moyenne de la colonne Y ?'… L'outil utilise l'IA pour répondre à tes demandes en langage naturel et génère des graphiques et des analyses en quelques secondes.",
     "image": "https://raw.githubusercontent.com/MounaimDAIEXP2/images/refs/heads/main/datasage.png",
@@ -265,7 +275,7 @@ export const projects = [
     "webapp": "https://vizualisationapp.streamlit.app/"
   },
   {
-    "id": 2,
+    "id": 3,
     "title": "BioPharm Analytics",
     "description": "Biopharm rencontrait un problème : l’entreprise ne savait pas combien de pièces de rechange acheter pour ses machines. Elle souhaitait donc un outil d’aide à la décision permettant de prédire le nombre de pièces à commander à des dates précises grâce à des modèles de séries temporelles et de machine learning. Cette solution a permis de réduire les coûts et d'optimiser la maintenance des équipements.",
     "image": "https://raw.githubusercontent.com/MounaimDAIEXP2/images/refs/heads/main/biopharm.png",
@@ -275,7 +285,7 @@ export const projects = [
     "webapp": "https://raw.githubusercontent.com/MounaimDAIEXP2/images/refs/heads/main/dall_e3.webp"
   },
   {
-    "id": 3,
+    "id": 4,
     "title": "SpeakerCount",
     "description": "Cet outil permet de compter le nombre de personnes qui parlent dans une vidéo donnée (URL YouTube) ou dans un fichier audio (MP3, WAV…). Il est à noter que le modèle utilisé est léger en raison des contraintes de déploiement, ce qui peut occasionner quelques erreurs. Cependant, le cœur du programme et des modèles reste inchangé, offrant une solution pratique pour l'analyse audio.",
     "image": "https://raw.githubusercontent.com/MounaimDAIEXP2/images/refs/heads/main/speaker_count.png",
@@ -285,7 +295,7 @@ export const projects = [
     "webapp": "https://speakercount.streamlit.app/"
   },
   {
-    "id": 4,
+    "id": 5,
     "title": "Jumia Market Analysis",
     "description": "Jumia est une entreprise de e-commerce (marketplace). De nombreux vendeurs utilisent la plateforme pour proposer leurs produits, mais après un certain temps, certains d’entre eux quittent Jumia. L’entreprise souhaitait comprendre les raisons de ces départs. Grâce à l’ACP et au machine learning, un site web a été conçu pour identifier ces raisons et prédire le taux de churn des vendeurs (probabilité qu’ils quittent ou restent sur la plateforme).",
     "image": "https://raw.githubusercontent.com/MounaimDAIEXP2/images/refs/heads/main/jumia.png",
@@ -295,7 +305,7 @@ export const projects = [
     "webapp": "https://www.youtube.com/watch?v=vYcCTU57sQQ"
   },
   {
-    "id": 5,
+    "id": 6,
     "title": "My Chatbot",
     "description": "Ce chatbot personnel sert de CV ou de portfolio interactif. Il permet de poser n'importe quelle question sur moi et mes projets. Grâce à une base de connaissances personnalisée et des techniques de RAG (Retrieval-Augmented Generation), il répond de manière précise et naturelle, comme si tu discutais directement avec moi.",
     "image": "https://raw.githubusercontent.com/MounaimDAIEXP2/images/refs/heads/main/chatbot.png",
@@ -305,7 +315,7 @@ export const projects = [
     "webapp": "https://mounaim-in-chatbot.streamlit.app/"
   },
   {
-    "id": 6,
+    "id": 7,
     "title": "Algeria Data Cup Winner",
     "description": "Il s'agit de la première compétition nationale de data science en Algérie, et nous avons eu l'honneur de la remporter. Notre solution de maintenance prédictive, basée sur des modèles de séries temporelles et d'ensemble learning, a permis de résoudre un problème complexe et de se démarquer parmi plus de 200 participants.",
     "image": "https://raw.githubusercontent.com/MounaimDAIEXP2/images/refs/heads/main/Zindi.png",
@@ -315,7 +325,7 @@ export const projects = [
     "webapp": "https://raw.githubusercontent.com/MounaimDAIEXP2/images/refs/heads/main/dall_e2.webp"
   },
   {
-    "id": 7,
+    "id": 8,
     "title": "StockPred",
     "description": "Une interface web qui fournit des informations en temps réel sur les marchés boursiers et permet d’effectuer des prévisions. Grâce à des modèles de séries temporelles comme Prophet, l'outil offre des insights précieux pour les investisseurs, qu'ils soient débutants ou expérimentés.",
     "image": "https://raw.githubusercontent.com/MounaimDAIEXP2/images/refs/heads/main/StockPred.png",
@@ -325,7 +335,7 @@ export const projects = [
     "webapp": "https://stockpred-parag.streamlit.app/"
   },
   {
-    "id": 8,
+    "id": 9,
     "title": "Digital Courses Platform",
     "description": "Une plateforme qui regroupe plusieurs sites d’e-learning comme Coursera. En arrière-plan, des algorithmes de NLP permettent d’effectuer des recherches : il suffit d’entrer un mot-clé dans la barre de recherche pour trouver le cours souhaité. L'outil simplifie la découverte de formations en centralisant les offres de plusieurs plateformes.",
     "image": "https://raw.githubusercontent.com/MounaimDAIEXP2/images/refs/heads/main/DigitalCourses.png",
